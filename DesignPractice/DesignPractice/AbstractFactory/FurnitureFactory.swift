@@ -118,7 +118,7 @@ struct VictorianFurnitureFactory: FurnitureFactory {
 }
 
 
-struct Client {
+struct FactoryClient {
     func getFurnitures(factory: FurnitureFactory) {
         let mordernFactoryChair = type(of: factory).createChair()
     }

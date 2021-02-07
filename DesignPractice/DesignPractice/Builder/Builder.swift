@@ -7,7 +7,7 @@
 
 import Foundation
 
-// Builder pattern will be used when we need to complex object which is having step by step process and whenever any constructor is having so many configuration params to deal with.
+// Builder pattern will be used when we need to complex object which is having step by step process and whenever any constructor is having so many configuration params to deal with. We can defer construction steps for future or if construction involves recursion
 protocol CarType {
     func hasFourWheels()
     func hasLongWheelBase()
@@ -115,5 +115,12 @@ struct Director {
         carBuilder.self.stepA()
         carBuilder.self.stepB()
         carBuilder.self.stepC()
+    }
+}
+
+struct BuilderClient {
+    func createProduct() {
+        let director = Director(SportsCarBuilder())
+        director.process()
     }
 }
