@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Builder pattern will be used when we need to complex object which is having step by step process and whenever any constructor is having so many configuration params to deal with.
 protocol CarType {
     func hasFourWheels()
     func hasLongWheelBase()
