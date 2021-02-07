@@ -49,10 +49,11 @@ extension PrototypeRegistery: PrototypeRegisteryType {
 
 struct Client {
     func getProductClone() {
-        let item = Product(id: "123", name: "Apple")
+        let id = "123"
+        let item: Prototype = Product(id: id, name: "Apple")
         let copy = item.clone()
         var register = PrototypeRegistery()
-        register.registerItem(item.id, item)
-        let x = register.getItem(item.id)
+        register.registerItem(id, item)
+        let x = register.getItem(id)
     }
 }
